@@ -34,17 +34,36 @@ This project has been tested unde Ubuntu 20.04 (via WSL 2 on Windows 11) and a P
 ## Repository Structure
 
 The repository consists of adversarial machine learning evasion attacks and defences for the image classification task.
-The experiments have been conducted on four different datasets: MNIST, FashionMNIST, CIFAR-10 and SVHN.
+
+The experiments have been conducted on four different datasets: MNIST, Fashion-MNIST, CIFAR-10 and SVHN.
 Unless you are interested in the implemention, I just recommend you take a look at the **notebooks/** folder, as it contains the experiments written as Jupyter Notebooks.
 
-.
-├── attacks                     # Contains .py files implementing popular evasion attacks (FGSM, BIM, PGD, CW)
-├── data                        # Contains trained models. Some models are inside .zip files to minimise repository size.
-├── defences                    # Contains .py files implementing popular defences (adversarial training and regularization methods)
-├── models                      # Contains .py files with the model architectures used
-├── notebooks                   # Contains the experiments
-├── scripts                     # Contains additional scripts using for the GPU cluster provided by university to accelerate experiments
-├── utils                       # Various .py files shared between the different modules
+Structure:
+- **attacks/**
+    - Contains .py files implementing popular evasion attacks (FGSM, BIM, PGD, CW).
+
+- **data/**
+    - Contains pre-trained models.
+    - You can find additional models (for all the experiments in the notebooks) using the following links:
+        - [MNIST](https://drive.google.com/file/d/1UrRky3J2bUn1Z-yR3pU11Gq8oiqziFcB/view?usp=sharing)
+        - [Fashion-MNIST]()
+        - [CIFAR-10]()
+        - [SVHN]()
+
+- **defences/**
+    - Contains .py files implementing popular defences (adversarial training and regularization methods).
+
+- **models/**
+    - Contains .py files with the model architectures used.
+
+- **notebooks/**
+    - Contains the experiments
+
+- **scripts/**
+    - Contains additional scripts using for the GPU cluster provided by university to accelerate experiments.
+
+- **utils/**
+    - Various .py files shared between the different modules
 
 ## Authors
 
