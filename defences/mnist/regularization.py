@@ -190,7 +190,7 @@ def jacobian_ALP_training(
     attack_name,
     attack_function,
     load_if_available=False,
-    load_path="../data/mnist/mnist_alp",
+    load_path="../data/mnist/mnist_jacobian_alp",
     **kwargs
 ):
     # Various training parameters

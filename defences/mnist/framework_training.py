@@ -25,7 +25,7 @@ def framework_training(
     attack_function1,
     attack_function2,
     load_if_available=False,
-    load_path="../data/mnist/mnist_dual",
+    load_path="../data/mnist/mnist_framework",
     **kwargs
 ):
     # Various training parameters
