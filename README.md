@@ -47,8 +47,7 @@ Structure:
     - You can find additional models (for all the experiments in the notebooks) using the following links:
         - [MNIST](https://drive.google.com/file/d/1UrRky3J2bUn1Z-yR3pU11Gq8oiqziFcB/view?usp=sharing)
         - [Fashion-MNIST](https://drive.google.com/file/d/1A8g1UYD1NXZBoDFqDfxmcP5jzx0OEiRF/view?usp=sharing)
-        - [CIFAR-10]()
-        - [SVHN]()
+        - [CIFAR-10](https://drive.google.com/file/d/1yBBka4XUUphaCHDoCD_NWGNqxIMegz80/view?usp=sharing)
 
 - **defences/**
     - Contains .py files implementing popular defences (adversarial training and regularization methods).

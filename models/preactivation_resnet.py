@@ -1,7 +1,6 @@
 '''
 Same as the ResNet, but uses pre-activation.
 '''
-
 import torch.nn as nn
 import torch.nn.functional as F
 

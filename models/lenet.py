@@ -4,10 +4,9 @@ A LeNet-5 in PyTorch.
 Reference:
 Yann LeCun et al, 1998.
 Gradient-Based Learning Applied to Document Recognition.
-[Paper] Available at: <http://yann.lecun.com/exdb/publis/pdf/lecun-01a.pdf> 
+[Paper] Available at: <http://yann.lecun.com/exdb/publis/pdf/lecun-01a.pdf>
 [Accessed 26 December 2021].
 '''
-
 import torch.nn as nn
 import torch.nn.functional as F
 

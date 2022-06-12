@@ -8,7 +8,6 @@ Deep Residual Learning for Image Recognition.
 [Paper] Available at: <https://arxiv.org/pdf/1512.03385.pdf>
 [Accessed 24 December 2021].
 '''
-
 import torch.nn as nn
 import torch.nn.functional as F
 

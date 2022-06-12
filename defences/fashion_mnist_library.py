@@ -1,7 +1,6 @@
 # This is a wrapper for keeping evidence of all the defences implemented for Fashion-MNIST
 # Imports all the module paths
 import sys
-
 sys.path.append("../../")
 
 import defences.fashion_mnist.standard_training as standard_training_utils
