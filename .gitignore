@@ -14,7 +14,6 @@ dist/
 downloads/
 eggs/
 .eggs/
-lib/
 lib64/
 parts/
 sdist/
@@ -125,3 +124,6 @@ datasets/
 # can be used, do not push those
 /data/svhn/svhn_framework_*
 /data/cifar10/cifar10_framework_*
+
+# Ignore output for the Mahalanobis-based detector
+/defences/mahalanobis_detector/output/

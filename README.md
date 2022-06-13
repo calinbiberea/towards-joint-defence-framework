@@ -1,10 +1,14 @@
 # Towards a Joint-Defence Framework against Evasion Attacks in Deep Learning
 
-This repository contains the software archive used for conducting the experiments for my final year individual project of my MEng degree at Imperial College London. This README.d file should help you navigate around the repository and get an idea of what my thesis presents. The **mahalanobis_detector/** folder contains code taken from [Adversarial Examples Detection and Analysis with Layer-wise Autoencoders](https://github.com/gmum/adversarial_examples_ae_layers), but has been significantly modified to meet the requirements of this project.
+This repository contains the software archive used for conducting the experiments for my final year individual project of my MEng degree at Imperial College London. This README.d file should help you navigate around the repository and get an idea of what my thesis presents. The **defences/mahalanobis_detector/** folder contains code taken from [Adversarial Examples Detection and Analysis with Layer-wise Autoencoders](https://github.com/gmum/adversarial_examples_ae_layers), but has been significantly modified to meet the requirements of this project.
+
+This repository has been migrated from this [repository](https://github.com/calinbiberea/towards-joint-defence-framework-commit-archive) as the .git history has grown to unreasonable size (around 4 GB). While this repository contains the latest files, the old repository has the commit history, if for any reason you are interested in that.
 
 ## Table of Contents
 - [Project Abstract](#project-abstract)
 - [Preliminaries](#preliminaries)
+- [Repository](#repository-structure)
+- [Constructing the Joint-Defence Framework](#constructing-the-joint-defence-framework)
 - [Authors](#authors)
 - [License](#license)
 
@@ -51,6 +55,7 @@ Structure:
 
 - **defences/**
     - Contains .py files implementing popular defences (adversarial training and regularization methods).
+    - Contains inside **mahalanobis_detector/** the necessary files to deploy a Mahalanobis-detector.
 
 - **models/**
     - Contains .py files with the model architectures used.
@@ -63,6 +68,24 @@ Structure:
 
 - **utils/**
     - Various .py files shared between the different modules
+
+## Constructing the Joint-Defence Framework
+
+All but the Mahalanobis-based detector (stored in **defences/mahalanobis_detector/**) can be constructed using
+the provided Jupyter notebooks.
+
+To get the results of the Mahalanobis-based detector for the *_framework models, do the following steps:
+
+1. `cd defences/mahalanobis_detector/`
+2. `./generate_adversarial_examples.sh $model $dataset $use_training` (to generate adversarial examples)
+
+    e.g. ./generate_adversarial_examples.sh lenet fashion true
+3. `./generate_mahalanobis_scores.sh $model $dataset $use_training` (to calculate the Mahalanobis scores)
+
+    e.g. ./generate_mahalanobis_scores.sh lenet fashion true
+4. `python calculate_robustness.py --net_type $model` (to get robustness for given model on datasets using it)
+
+    e.g. python calculate_robustness.py --net_type lenet
 
 ## Authors
 

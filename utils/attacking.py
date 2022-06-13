@@ -76,3 +76,5 @@ def attack_model(model, testSetLoader, attack_name, attack_function, **kwargs):
         correct += (preds == labels).sum().item()
 
     print("... done! Accuracy: {}%\n------------------------------------\n".format(float(correct) * 100 / 10000))
+
+    return float(correct) * 100 / 10000
